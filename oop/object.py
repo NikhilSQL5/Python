@@ -1,5 +1,3 @@
-#import Car from cars
-
 class Car:
     def __init__(self, model, year, for_sale):
         self.model = model
