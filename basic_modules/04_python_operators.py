@@ -15,3 +15,8 @@ quantity = 3
 
 line_total = unit_price * quantity
 print("Line total:", line_total)
+
+total_amount = 4599
+number_of_orders = 3
+average_order_value = total_amount / number_of_orders
+print("Average order value:", average_order_value)
