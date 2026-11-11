@@ -29,3 +29,8 @@ full_boxes = items_to_ship // items_per_box
 leftover_items = items_to_ship % items_per_box
 print("Full boxes:", full_boxes, "| Leftover items:", leftover_items)
 
+# Expected Output:
+# Line total: 4367.34
+# Average order value: 1533.0
+# Full boxes: 3 | Leftover items: 2
+
