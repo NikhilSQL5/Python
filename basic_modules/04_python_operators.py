@@ -34,3 +34,13 @@ print("Full boxes:", full_boxes, "| Leftover items:", leftover_items)
 # Average order value: 1533.0
 # Full boxes: 3 | Leftover items: 2
 
+# -----------------------------------------------------------------
+# Comparison operators
+# -----------------------------------------------------------------
+order_total = 7458.30
+
+print(order_total > 5000)    # True
+print(order_total == 7458.30)  # True
+print(order_total != 5000)   # True
+
+
