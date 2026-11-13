@@ -43,4 +43,14 @@ print(order_total > 5000)    # True
 print(order_total == 7458.30)  # True
 print(order_total != 5000)   # True
 
+status = "Delivered"
+print(status == "Cancelled")  # False
+
+# Expected Output:
+# True
+# True
+# True
+# False
+
+
 
