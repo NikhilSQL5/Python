@@ -53,4 +53,22 @@ print(status == "Cancelled")  # False
 # False
 
 
+# -----------------------------------------------------------------
+# Logical operators
+# -----------------------------------------------------------------
+order_total = 7458.30
+status = "Delivered"
+
+is_high_value_and_delivered = (order_total > 5000) and (status == "Delivered")
+print("High value and delivered:", is_high_value_and_delivered)
+
+is_low_value_or_cancelled = (order_total < 1000) or (status == "Cancelled")
+print("Low value or cancelled:", is_low_value_or_cancelled)
+
+print("NOT delivered:", not (status == "Delivered"))
+
+# Expected Output:
+# High value and delivered: True
+# Low value or cancelled: False
+# NOT delivered: False
 
