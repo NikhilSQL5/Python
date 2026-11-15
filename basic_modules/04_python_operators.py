@@ -72,3 +72,12 @@ print("NOT delivered:", not (status == "Delivered"))
 # Low value or cancelled: False
 # NOT delivered: False
 
+# -----------------------------------------------------------------
+# Assignment operators
+# -----------------------------------------------------------------
+total_orders = 0
+total_orders += 1
+total_orders += 1
+total_orders += 1
+print("Total orders counted:", total_orders)
+
