@@ -81,3 +81,11 @@ total_orders += 1
 total_orders += 1
 print("Total orders counted:", total_orders)
 
+running_revenue = 0.0
+running_revenue += 4599.00
+running_revenue += 1250.50
+print("Running revenue:", running_revenue)
+
+# Expected Output:
+# Total orders counted: 3
+# Running revenue: 5849.5
