@@ -89,3 +89,20 @@ print("Running revenue:", running_revenue)
 # Expected Output:
 # Total orders counted: 3
 # Running revenue: 5849.5
+
+
+# -----------------------------------------------------------------
+# Membership operators
+# -----------------------------------------------------------------
+valid_statuses = ["Delivered", "Shipped", "Cancelled", "Returned"]
+
+status = "Delivered"
+print(status in valid_statuses)          # True
+
+payment = "Bitcoin"
+allowed_payments = ["UPI", "Credit Card", "Cash on Delivery"]
+print(payment not in allowed_payments)   # True
+
+# Expected Output:
+# True
+# True
