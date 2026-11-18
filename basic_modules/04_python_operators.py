@@ -106,3 +106,14 @@ print(payment not in allowed_payments)   # True
 # Expected Output:
 # True
 # True
+
+# -----------------------------------------------------------------
+# STEP 6: Identity operators
+# -----------------------------------------------------------------
+discount_code = None
+print(discount_code is None)       # True
+print(discount_code is not None)   # False
+
+# Expected Output:
+# True
+# False
