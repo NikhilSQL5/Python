@@ -117,3 +117,16 @@ print(discount_code is not None)   # False
 # Expected Output:
 # True
 # False
+
+# -----------------------------------------------------------------
+# BUSINESS EXAMPLE: Flagging a "priority order"
+# -----------------------------------------------------------------
+order_total = 6200.00
+status = "Shipped"
+
+is_priority = (order_total > 5000) and (status != "Cancelled")
+print("Priority order:", is_priority)
+
+# Expected Output:
+# Priority order: True
+
