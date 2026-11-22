@@ -27,3 +27,19 @@ print(product_name[-1])   # s  (last character, using negative indexing)
 # E
 # b
 # s
+
+# -----------------------------------------------------------------
+# String slicing
+# -----------------------------------------------------------------
+email = "nick@example.com"
+username_part = email[0:12]
+print(username_part)   # nick
+
+product_name = "Wireless Earbuds"
+print(product_name[:8])    # Wireless
+print(product_name[9:])    # Earbuds
+
+# Expected Output:
+# nick
+# Wireless
+# Earbuds
