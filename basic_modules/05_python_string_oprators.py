@@ -43,3 +43,26 @@ print(product_name[9:])    # Earbuds
 # nick
 # Wireless
 # Earbuds
+
+# -----------------------------------------------------------------
+# String methods
+# -----------------------------------------------------------------
+status = "delivered"
+print(status.upper())          # DELIVERED
+
+raw_city = "  Mumbai  "
+print(raw_city.strip())        # Mumbai (no extra spaces)
+
+raw_payment = "COD"
+print(raw_payment.replace("COD", "Cash on Delivery"))  # Cash on Delivery
+
+full_name = "nick"
+print(full_name.title())       # nick 
+
+csv_line = "nick,Mumbai"
+parts = csv_line.split(",")
+print(parts)                   # ['nick', 'Mumbai']
+
+print(len("Earbuds"))          # 7
+print("Delivered".startswith("Del"))  # True
+print("Delivered".endswith("ed"))     # True
