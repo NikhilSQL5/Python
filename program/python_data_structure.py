@@ -256,7 +256,7 @@ print("After update:", sorted(active_customers))
 active_customers.remove("C102")
 print("After remove:", sorted(active_customers))
 
-active_customers.discard("C999")
+active_customers.discard("C999") #discard() is a built-in set method that removes a specific element from a set without raising an error if the item is missing
 print("After discard of a missing ID:", sorted(active_customers))
 
 try:
