@@ -220,3 +220,44 @@ customer_ids = [101, 102, 103, 102, 104, 101, 105]
 unique_id = set(customer_ids)
 
 print("Unique IDs: ", unique_id)
+
+"""
+Problem Statement
+A shop keeps a set of active customer IDs. Add customers, remove customers, and see the difference between remove() and discard().
+
+Example Input
+active_customers = {"C101", "C102", "C103"}
+
+Expected Output
+After add: ['C101', 'C102', 'C103', 'C104']
+After adding C101 again: ['C101', 'C102', 'C103', 'C104']
+After update: ['C101', 'C102', 'C103', 'C104', 'C105', 'C106']
+After remove: ['C101', 'C103', 'C104', 'C105', 'C106']
+After discard of a missing ID: ['C101', 'C103', 'C104', 'C105', 'C106']
+remove() raised a KeyError for C999
+
+
+"""
+
+active_customers = {"C101", "C102", "C103"}
+
+active_customers.add("C104")
+print("After add:", sorted(active_customers))
+
+active_customers.add("C101")
+print("After adding C101 again:", sorted(active_customers))
+
+active_customers.update(["C105", "C106"])
+print("After update:", sorted(active_customers))
+
+active_customers.remove("C102")
+print("After remove:", sorted(active_customers))
+
+active_customers.discard("C999")
+print("After discard of a missing ID:", sorted(active_customers))
+
+try:
+    active_customers.remove("C999")
+except KeyError:
+    print("remove() raised a KeyError for C999")
+
