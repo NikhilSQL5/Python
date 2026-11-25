@@ -217,9 +217,12 @@ Is 104 a customer? True
 
 customer_ids = [101, 102, 103, 102, 104, 101, 105]
 
-unique_id = set(customer_ids)
+unique_ids = set(customer_ids)
 
-print("Unique IDs: ", unique_id)
+print("Unique IDs: ", unique_ids)
+print("Total entries: ", len(customer_ids))
+print("Unique customers: ", len(unique_ids))
+print("Is 104 a customer? ", 104 in customer_ids)
 
 """
 Problem Statement
