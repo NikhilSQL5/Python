@@ -235,4 +235,48 @@ print("Best month number: ", best_index + 1 )
 avg_order = (sum(monthly_orders)/len(monthly_orders))
 print("Average orders: ", round(avg_order,2))
 
+"""
+Problem Statement
+Product names and prices are saved in two lists. Convert them to tuples, combine each name and price into a record, print the records, and then add a new product to the tuple (using a list in between).
+
+Example Input
+names = ["Pen", "Notebook", "Bag"]
+prices = [10, 50, 600]
+
+Expected Output
+Names: ('Pen', 'Notebook', 'Bag')
+Pen costs 10
+Notebook costs 50
+Bag costs 600
+After adding Marker: ('Pen', 'Notebook', 'Bag', 'Marker')
+
+"""
+
+names = ["Pen", "Notebook", "Bag"]
+prices = [10, 50, 600]
+
+products_name = tuple(names) #create the name tuple
+products_price = tuple(prices) #create the price tuple
+
+print("Names: ", products_name)
+
+products_record = [] #create the empty list to store append records
+
+for index in range(len(products_name)):
+    products_record.append((products_name[index], products_price[index])) #append name and price based upon the index
+
+# print(products_record)
+
+records = []
+for index in range(len(products_name)):
+    records.append((products_name[index], products_price[index]))
+
+for product_name, product_price in products_record:
+    print(product_name, " costs ", product_price)
+
+temp_list = list(products_name)
+temp_list.append("Marker")
+new_tuple = tuple(temp_list)
+print("After adding Marker: ", new_tuple)
+
 
