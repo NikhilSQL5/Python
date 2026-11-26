@@ -171,3 +171,68 @@ for amount in order_amounts:
 print("Largest: ", largest)
 
 print("Second largest: ", second_largest)
+
+"""
+Problem Statement
+From a list of order amounts, extract the high-value orders (5000 or more). Do it with a loop and with a list comprehension. Then apply a 10% discount to the high-value orders and count how often 5500 appears.
+
+Example Input
+order_amounts = [1200, 5500, 800, 7200, 3000, 9100, 5500]
+
+Expected Output
+High orders (loop): [5500, 7200, 9100, 5500]
+High orders (comprehension): [5500, 7200, 9100, 5500]
+With 10% discount: [4950.0, 6480.0, 8190.0, 4950.0]
+5500 appears 2 times
+
+"""
+
+order_amounts = [1200, 5500, 800, 7200, 3000, 9100, 5500]
+
+high_order = []
+for amount in order_amounts:
+    if amount >= 5000:
+        high_order.append(amount)
+
+print("High orders (loop): ", high_order)
+
+high_order_2 = [amount for amount in order_amounts if amount >= 5000]
+
+print("High orders (comprehension): ", high_order_2)
+
+discount = [round(amount * 0.9, 2) for amount in order_amounts]
+print("with 10% discount: ", discount)
+
+print("5500 appears ", order_amounts.count(5500), " times")
+
+"""
+Problem Statement
+The number of orders for seven months is stored in a tuple. Find the lowest and highest values, how many months had 95 orders, which month number was the best, and the average.
+
+Example Input
+monthly_orders = (120, 95, 140, 95, 160, 110, 95)
+
+Expected Output
+Lowest: 95
+Highest: 160
+Months with 95 orders: 3
+Best month number: 5
+Average orders: 116.43
+
+"""
+
+monthly_orders = (120, 95, 140, 95, 160, 110, 95)
+
+print("Lowest: ", min(monthly_orders))
+
+print("Highest: ", max(monthly_orders))
+
+print("Months with 95 orders: ", monthly_orders.count(95))
+
+best_index = monthly_orders.index(max(monthly_orders))
+print("Best month number: ", best_index + 1 )
+
+avg_order = (sum(monthly_orders)/len(monthly_orders))
+print("Average orders: ", round(avg_order,2))
+
+
