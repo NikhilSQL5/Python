@@ -280,3 +280,63 @@ new_tuple = tuple(temp_list)
 print("After adding Marker: ", new_tuple)
 
 
+"""
+Problem Statement
+A company has a set of customers who bought online and a set of customers who bought in a store. Find customers who used both channels, all customers, customers who used only online, and customers who used only the store.
+
+Example Input
+online = {"C101", "C102", "C103", "C104"}
+store = {"C103", "C104", "C105"}
+
+Expected Output
+Used both channels: ['C103', 'C104']
+All customers: ['C101', 'C102', 'C103', 'C104', 'C105']
+Only online: ['C101', 'C102']
+Only in store: ['C105']
+
+"""
+
+online = {"C101", "C102", "C103", "C104"}
+store = {"C103", "C104", "C105"}
+
+both = online.intersection(store) #intersection() keeps the values that are in both sets.
+print("Used both channels:", sorted(both))
+
+everyone = online.union(store) #union() combines all values from both sets, without repeats.
+print("All customers:", sorted(everyone))
+
+only_online = online.difference(store) #online.difference(store) keeps what is in online but not in store.
+print("Only online:", sorted(only_online))
+
+only_store = store.difference(online) #store.difference(online) is the opposite. It is a different result.
+print("Only in store:", sorted(only_store))
+
+"""
+Problem Statement
+Two warehouses hold different products. Find the products they both hold, the products that only one of them holds, the total number of different products, and check if both warehouses hold exactly the same products.
+
+Example Input
+warehouse_a = {"Pen", "Notebook", "Bag", "Marker"}
+warehouse_b = {"Bag", "Marker", "Stapler", "Ruler"}
+
+Expected Output
+Common products: ['Bag', 'Marker']
+Products in only one warehouse: ['Notebook', 'Pen', 'Ruler', 'Stapler']
+Total different products: 6
+Same products in both? False
+
+"""
+
+warehouse_a = {"Pen", "Notebook", "Bag", "Marker"}
+warehouse_b = {"Bag", "Marker", "Stapler", "Ruler"}
+
+common_product = warehouse_a.intersection(warehouse_b)
+print("Common products: ", common_product)
+
+only_one = warehouse_a.symmetric_difference(warehouse_b)
+print("Products in only one warehouse: ", only_one)
+
+total_products = warehouse_a.union(warehouse_b)
+print("Total different products: ", total_products)
+
+print("Same products in both? ", warehouse_a == warehouse_b)
