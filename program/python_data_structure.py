@@ -263,4 +263,69 @@ try:
     active_customers.remove("C999")
 except KeyError:
     print("remove() raised a KeyError for C999")
+"""
+Create a dictionary for a student record. Read values with square brackets and with get(), and check if a key exists.
 
+Example Input
+student = {
+    "name": "Nick", "age": 22,
+    "course": "Data Engineer", "score": 86
+}
+
+Expected Output
+Name: Nick
+Course: Data Engineer
+City: Not given
+Number of fields: 4
+Has a score? True
+
+"""
+
+student = {
+    "name": "Nick", "age": 22,
+    "course": "Data Engineer", "score": 86
+}
+
+print("Name: ",student["name"])
+print("Course: ",student["course"])
+print("City: ",student.get("city","Not given"))
+print("Number of fields: ", len(student))
+print("Has a score? ", "score" in student)
+
+"""
+An employee record is saved in a dictionary. Add new information, change the department, add several fields at once, and remove one field.
+
+Example Input
+employee = {"id": 101, "name": "Nick", "department": "Sales"}
+
+Expected Output
+Email: nick@mail.com
+Department: Marketing
+Fields: ['id', 'name', 'department', 'email', 'city', 'experience_years']
+Removed value: 3
+Final record:
+  id : 101
+  name : nick
+  department : Marketing
+  email : nick@example.com
+  city : Pune
+
+"""
+
+employee = {"id": 101, "name": "Nick", "department": "Sales"}
+
+employee["email"] = "nick@mail.com"
+print("Email: ", employee["email"] )
+
+employee["department"] = "Marketing"
+print("Department: ", employee["department"])
+
+employee.update({"city": "Pune", "experience_years": 3})
+
+print("Fields:", list(employee.keys()))
+
+remove_value = employee.pop("experience_years")
+
+print("Final record:")
+for key in employee:
+    print(" ", key, ":", employee[key] )
